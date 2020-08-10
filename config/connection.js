@@ -1,0 +1,26 @@
+//DEPENDECIES
+require("dotenv").config();
+var mysql = require("mysql");
+//====================================
+
+// CONNECTION SETUP
+var connection;
+// Heroku Connection
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+  // local Connection
+} else {
+  connection = mysql.createConnection(process.env.DB_URL);
+}
+
+// Connect to the database
+connection.connect(function (err) {
+  if (err) {
+    console.error("error connecting: " + err.stack);
+    return;
+  }
+  console.log("connected as id " + connection.threadId);
+});
+
+// export the connection
+module.exports = connection;
