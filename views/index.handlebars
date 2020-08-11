@@ -21,18 +21,18 @@
       <ul class="">
         {{#each burgers}}
         {{#if devoured}}
-        {{> burgers/burger-block}}
+        <li class="ate list-group-item list-group-item-success">{{burger_name}}</li>
         {{/if}}
+
         {{/each}}
       </ul>
     </div>
   </div>
-  <div class="row list-group">
+  <div class="row list-group" style="margin-top: 30px;">
     <div class="col-sm-12">
       <h5>ADD A BURGER</h5>
       <form class="create-form">
         <input class="mx-auto d-block" placeholder="Enter a Burger Name" type="text" id="ca" name="name">
-        <label for="ca"></label>
         <input type="radio" id="eaten" name="add" value="1">
         <label for="eaten">Eaten!</label><br>
         <input type="radio" id="try" name="add" value="0">

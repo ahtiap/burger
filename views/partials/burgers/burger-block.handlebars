@@ -1,4 +1,5 @@
-<li class="ate list-group-item">{{burger_name}} {{#unless devoured}}
+<li class="ate list-group-item list-group-item-danger">{{burger_name}}
+	{{#unless devoured}}
 	<button class="change-devoured btn btn-primary" data-id="{{id}}" data-newdevoured="{{devoured}}">
 		Devour It!!!
 	</button>
