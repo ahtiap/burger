@@ -1,15 +1,13 @@
 <header>
-  <h1><img
-      src="https://images.vexels.com/media/users/3/152676/isolated/lists/4901900ec6cd623e843598a78d23eefa-triple-cheeseburger-icon.png"
-      alt="burger"></h1>
-  <h1>EAT-DA-BURGER!</h1>
+
+  <h1 style="text-align: center">EAT-DA-BURGER!</h1>
 
 </header>
 
 <div class="container" style="text-align: -webkit-center; padding-top: 2%">
-  <div class="row mb-3" style="justify-content: center">
-    <div class="col-sm-4">
-      <h5 class="text-center py-1">BURGERS TO BE POUNDED!</h5>
+  <div class="row">
+    <div class="col-sm-6">
+      <h5 class="text-center py-1">BURGERS YOU HAVEN'T TRIED!</h5>
 
       {{#each burgers}}
       {{#unless devoured}}
@@ -18,8 +16,8 @@
       {{/each}}
     </div>
 
-    <div class="toeat col-sm-4">
-      <h5 class="text-center py-1">BURGERS YOU ANNIHALATED!</h5>
+    <div class="toeat col-sm-6">
+      <h5 class="text-center py-1">BURGERS TRIED!</h5>
       <ul class="">
         {{#each burgers}}
         {{#if devoured}}
@@ -29,17 +27,19 @@
       </ul>
     </div>
   </div>
-
-  <div class="col-sm-4">
-    <h5 class="text-center py-1">ADD YOUR BURGER</h5>
-    <form class="create-form">
-      <input class="mx-auto d-block" placeholder="Enter a Burger Name" type="text" id="ca" name="name">
-      <label for="ca"></label>
-      <input type="radio" id="eaten" name="add" value="1">
-      <label for="eaten">Eaten!</label><br>
-      <input type="radio" id="try" name="add" value="0">
-      <label for="try">Have to Try It!</label><br>
-      <input class="btn btn-primary" type="submit" value="Submit">
-    </form>
+  <div class="row list-group">
+    <div class="col-sm-12">
+      <h5>ADD A BURGER</h5>
+      <form class="create-form">
+        <input class="mx-auto d-block" placeholder="Enter a Burger Name" type="text" id="ca" name="name">
+        <label for="ca"></label>
+        <input type="radio" id="eaten" name="add" value="1">
+        <label for="eaten">Eaten!</label><br>
+        <input type="radio" id="try" name="add" value="0">
+        <label for="try">Have to Try It!</label><br>
+        <input class="btn btn-primary" type="submit" value="Submit">
+      </form>
+    </div>
   </div>
+
 </div>
